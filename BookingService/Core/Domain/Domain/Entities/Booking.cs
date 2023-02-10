@@ -11,6 +11,11 @@ namespace Domain.Entities
         public DateTime End { get; set; }
         private Status Status { get; set; }
 
+        public Booking()
+        {
+            this.Status = Status.Created;
+        }
+
         public Status CurrentStatus { get { return this.Status; } }
 
         public void ChangeState(Action action) 
