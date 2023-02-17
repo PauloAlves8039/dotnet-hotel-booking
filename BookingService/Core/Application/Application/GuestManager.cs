@@ -2,6 +2,7 @@
 using Application.Guest.Ports;
 using Application.Guest.Requests;
 using Application.Guest.Responses;
+using Domain.Exceptions;
 using Domain.Ports;
 
 namespace Application
@@ -27,6 +28,33 @@ namespace Application
                 {
                     Data = request.Data,
                     Success = true,
+                };
+            }
+            catch (InvalidPersonDocumentIdException e)
+            {
+                return new GuestResponse
+                {
+                    Success = false,
+                    ErrorCode = ErrorCodes.INVALID_PERSON_ID,
+                    Message = "The ID passed is not valid"
+                };
+            }
+            catch (MissingRequiredInformation e)
+            {
+                return new GuestResponse
+                {
+                    Success = false,
+                    ErrorCode = ErrorCodes.MISSING_REQUIRED_INFORMATION,
+                    Message = "Missing required information passed"
+                };
+            }
+            catch (InvalidEmailException e)
+            {
+                return new GuestResponse
+                {
+                    Success = false,
+                    ErrorCode = ErrorCodes.INVALID_EMAIL,
+                    Message = "The given email is not valid"
                 };
             }
             catch (Exception)
