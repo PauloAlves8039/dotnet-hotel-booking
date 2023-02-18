@@ -1,7 +1,7 @@
-﻿using Application;
-using Application.Guest.DTO;
+﻿using Application.Guest.DTO;
 using Application.Guest.Ports;
 using Application.Guest.Requests;
+using Application.Responses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers

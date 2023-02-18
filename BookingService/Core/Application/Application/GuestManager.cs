@@ -2,6 +2,7 @@
 using Application.Guest.Ports;
 using Application.Guest.Requests;
 using Application.Guest.Responses;
+using Application.Responses;
 using Domain.Exceptions;
 using Domain.Ports;
 
@@ -23,6 +24,10 @@ namespace Application
                 var guest = GuestDTO.MapToEntity(request.Data);
 
                 request.Data.Id = await _guestRepository.Create(guest);
+
+                await guest.Save(_guestRepository);
+
+                request.Data.Id = guest.Id;
 
                 return new GuestResponse
                 {

@@ -1,4 +1,5 @@
 ﻿using Application.Guest.DTO;
+using Application.Responses;
 
 namespace Application.Guest.Responses
 {
