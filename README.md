@@ -15,6 +15,8 @@ O código fonte da aplicação foi baseado no curso [Microserviços com Hexagona
 - [SQL Server 2019](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 - [Entity Framework Core v6.0.3](https://learn.microsoft.com/pt-br/ef/core/)
 - [NUnit v2.4.1](https://nunit.org/)
+- [Moq v4.17.2](https://github.com/Moq/moq4/wiki/Quickstart)
+- [Swagger v6.2.3](https://swagger.io/)
 
 ## :floppy_disk: Clonar Repositório
 Baixar repositório ```https://github.com/PauloAlves8039/dotnet-hotel-booking.git```
