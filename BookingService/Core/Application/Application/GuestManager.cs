@@ -3,8 +3,8 @@ using Application.Guest.Ports;
 using Application.Guest.Requests;
 using Application.Guest.Responses;
 using Application.Responses;
-using Domain.Exceptions;
-using Domain.Ports;
+using Domain.Guest.Exceptions;
+using Domain.Guest.Ports;
 
 namespace Application
 {

@@ -2,8 +2,10 @@
 using Application.Guest.DTO;
 using Application.Guest.Requests;
 using Application.Responses;
-using Domain.Entities;
-using Domain.Ports;
+using Domain.Guest.Entities;
+using Domain.Guest.Enums;
+using Domain.Guest.Ports;
+using Domain.Guest.ValueObjects;
 using Moq;
 using NUnit.Framework;
 
@@ -152,7 +154,7 @@ namespace ApplicationTests
                 Name = "Test",
                 DocumentId = new Domain.ValueObjects.PersonId
                 {
-                    DocumentType = Domain.Enums.DocumentType.DriveLicence,
+                    DocumentType = DocumentType.DriveLicence,
                     IdNumber = "123"
                 }
             };

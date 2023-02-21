@@ -1,8 +1,8 @@
-﻿using Domain.Exceptions;
-using Domain.Ports;
+﻿using Domain.Guest.Exceptions;
+using Domain.Guest.Ports;
 using Domain.ValueObjects;
 
-namespace Domain.Entities
+namespace Domain.Guest.Entities
 {
     public class Guest
     {
@@ -32,14 +32,14 @@ namespace Domain.Entities
                 throw new InvalidPersonDocumentIdException();
             }
 
-            if (string.IsNullOrEmpty(Name) || 
-                string.IsNullOrEmpty(Surname) || 
+            if (string.IsNullOrEmpty(Name) ||
+                string.IsNullOrEmpty(Surname) ||
                 string.IsNullOrEmpty(Email))
             {
                 throw new MissingRequiredInformation();
             }
 
-            if (Utils.ValidateEmail(this.Email) == false)
+            if (Utils.ValidateEmail(Email) == false)
             {
                 throw new InvalidEmailException();
             }
