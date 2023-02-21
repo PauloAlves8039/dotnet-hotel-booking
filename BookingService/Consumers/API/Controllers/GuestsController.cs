@@ -1,4 +1,4 @@
-﻿using Application.Guest.DTO;
+﻿using Application.Guest.Dtos;
 using Application.Guest.Ports;
 using Application.Guest.Requests;
 using Application.Responses;
@@ -22,7 +22,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<GuestDTO>> Post(GuestDTO guest) 
+        public async Task<ActionResult<GuestDto>> Post(GuestDto guest) 
         {
             var request = new CreateGuestRequest
             {
@@ -59,11 +59,11 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<GuestDTO>> Get(int guestId)
+        public async Task<ActionResult<GuestDto>> Get(int guestId)
         {
             var res = await _guestManager.GetGuest(guestId);
 
-            if (res.Success) return Ok("", res.Data);
+            if (res.Success) return Ok(res.Data);
 
             return NotFound(res);
         }

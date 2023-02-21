@@ -1,10 +1,10 @@
-﻿using Application.Guest.DTO;
+﻿using Application.Guest.Dtos;
 using Application.Responses;
 
 namespace Application.Guest.Responses
 {
     public class GuestResponse : Response
     {
-        public GuestDTO Data;
+        public GuestDto Data;
     }
 }
