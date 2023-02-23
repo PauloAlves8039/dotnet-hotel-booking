@@ -1,5 +1,5 @@
-﻿using Domain.Guest.Enums;
-using Action = Domain.Guest.Enums.Action;
+﻿using Domain.Guests.Enums;
+using Action = Domain.Guests.Enums.Action;
 
 namespace Domain.Guest.Entities
 {

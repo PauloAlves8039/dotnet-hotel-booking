@@ -1,6 +1,6 @@
-﻿using Domain.Guest.Exceptions;
-using Domain.Guest.Ports;
-using Domain.ValueObjects;
+﻿using Domain.Guests.Exceptions;
+using Domain.Guests.Ports;
+using Domain.Guests.ValueObjects;
 
 namespace Domain.Guest.Entities
 {
