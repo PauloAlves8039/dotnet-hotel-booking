@@ -1,4 +1,4 @@
-﻿namespace Domain.Room.Ports
+﻿namespace Domain.Roons.Ports
 {
     public interface IRoomRepository
     {

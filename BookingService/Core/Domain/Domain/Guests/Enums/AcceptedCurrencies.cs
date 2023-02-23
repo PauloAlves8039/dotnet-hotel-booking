@@ -1,4 +1,4 @@
-﻿namespace Domain.Guest.Enums
+﻿namespace Domain.Guests.Enums
 {
     public enum AcceptedCurrencies
     {

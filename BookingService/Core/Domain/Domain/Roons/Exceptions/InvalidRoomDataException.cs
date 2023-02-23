@@ -1,4 +1,4 @@
-﻿namespace Domain.Room.Exceptions
+﻿namespace Domain.Roons.Exceptions
 {
     public class InvalidRoomDataException : Exception
     {

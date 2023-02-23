@@ -1,8 +1,8 @@
-﻿using Domain.Room.Exceptions;
-using Domain.Room.Ports;
-using Domain.ValueObjects;
+﻿using Domain.Roons.Exceptions;
+using Domain.Roons.Ports;
+using Domain.Guests.ValueObjects;
 
-namespace Domain.Room.Entities
+namespace Domain.Roons.Entities
 {
     public class Room
     {
