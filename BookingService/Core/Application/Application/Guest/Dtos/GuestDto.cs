@@ -1,5 +1,5 @@
 ﻿using Entities = Domain.Guest.Entities;
-using Domain.Guest.Enums;
+using Domain.Guests.Enums;
 
 namespace Application.Guest.Dtos
 {
@@ -20,7 +20,7 @@ namespace Application.Guest.Dtos
                 Name = guestDTO.Name,
                 Surname = guestDTO.Surname,
                 Email = guestDTO.Email,
-                DocumentId = new Domain.ValueObjects.PersonId
+                DocumentId = new Domain.Guests.ValueObjects.PersonId
                 {
                     IdNumber = guestDTO.IdNumber,
                     DocumentType = (DocumentType)guestDTO.IdTypeCode

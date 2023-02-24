@@ -1,4 +1,4 @@
-﻿using Domain.Guest.Enums;
+﻿using Domain.Guests.Enums;
 
 namespace Application.Room.Dtos
 {
@@ -11,15 +11,15 @@ namespace Application.Room.Dtos
         public decimal Price { get; set; }
         public AcceptedCurrencies Currency { get; set; }
 
-        public static Domain.Entities.Room MapToEntity(RoomDto dto)
+        public static Domain.Roons.Entities.Room MapToEntity(RoomDto dto)
         {
-            return new Domain.Entities.Room
+            return new Domain.Roons.Entities.Room
             {
                 Id = dto.Id,
                 Name = dto.Name,
                 Level = dto.Level,
                 InMaintenance = dto.InMaintenance,
-                Price = new Domain.ValueObjects.Price { Currency = dto.Currency, Value = dto.Price }
+                Price = new Domain.Guests.ValueObjects.Price { Currency = dto.Currency, Value = dto.Price }
             };
         }
     }

@@ -3,8 +3,8 @@ using Application.Room.Dtos;
 using Application.Room.Ports;
 using Application.Room.Requests;
 using Application.Room.Responses;
-using Domain.Room.Exceptions;
-using Domain.Room.Ports;
+using Domain.Roons.Exceptions;
+using Domain.Roons.Ports;
 
 namespace Application.Room
 {
