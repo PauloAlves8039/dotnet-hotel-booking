@@ -1,4 +1,4 @@
-﻿using Domain.Room.Ports;
+﻿using Domain.Roons.Ports;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Room
@@ -12,14 +12,14 @@ namespace Data.Room
             _hotelDbContext = hotelDbContext;
         }
 
-        public async Task<int> Create(Domain.Room.Entities.Room room)
+        public async Task<int> Create(Domain.Roons.Entities.Room room)
         {
             _hotelDbContext.Rooms.Add(room);
             await _hotelDbContext.SaveChangesAsync();
             return room.Id;
         }
 
-        public Task<Domain.Room.Entities.Room> Get(int Id)
+        public Task<Domain.Roons.Entities.Room> Get(int Id)
         {
             return _hotelDbContext.Rooms.Where(g => g.Id == Id).FirstAsync();
         }

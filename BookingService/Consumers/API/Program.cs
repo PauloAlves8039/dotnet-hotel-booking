@@ -2,12 +2,12 @@ using Application.Guest.Ports;
 using Data;
 using Data.Guest;
 using Microsoft.EntityFrameworkCore;
-using Domain.Guest.Ports;
+using Domain.Guests.Ports;
 using Application.Guest;
 using Application.Room.Ports;
 using Application.Room;
 using Data.Room;
-using Domain.Room.Ports;
+using Domain.Roons.Ports;
 
 var builder = WebApplication.CreateBuilder(args);
 
