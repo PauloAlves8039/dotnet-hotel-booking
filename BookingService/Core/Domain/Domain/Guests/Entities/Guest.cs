@@ -2,7 +2,7 @@
 using Domain.Guests.Ports;
 using Domain.Guests.ValueObjects;
 
-namespace Domain.Guest.Entities
+namespace Domain.Guests.Entities
 {
     public class Guest
     {
