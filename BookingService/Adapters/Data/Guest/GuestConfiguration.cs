@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Data.Guest
 {
-    public class GuestConfiguration : IEntityTypeConfiguration<Domain.Guest.Entities.Guest>
+    public class GuestConfiguration : IEntityTypeConfiguration<Domain.Guests.Entities.Guest>
     {
-        public void Configure(EntityTypeBuilder<Domain.Guest.Entities.Guest> builder)
+        public void Configure(EntityTypeBuilder<Domain.Guests.Entities.Guest> builder)
         {
             builder.HasKey(x => x.Id);
             builder.OwnsOne(x => x.DocumentId)

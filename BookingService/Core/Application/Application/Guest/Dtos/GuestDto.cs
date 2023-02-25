@@ -1,4 +1,4 @@
-﻿using Entities = Domain.Guest.Entities;
+﻿using Entities = Domain.Guests.Entities;
 using Domain.Guests.Enums;
 
 namespace Application.Guest.Dtos
@@ -28,7 +28,7 @@ namespace Application.Guest.Dtos
             };
         }
 
-        public static GuestDto MapToDto(Domain.Guest.Entities.Guest guest)
+        public static GuestDto MapToDto(Domain.Guests.Entities.Guest guest)
         {
             return new GuestDto
             {

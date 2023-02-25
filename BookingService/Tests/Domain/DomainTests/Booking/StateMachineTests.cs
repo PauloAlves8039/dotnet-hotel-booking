@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Action = Domain.Guests.Enums.Action;
 using Domain.Guests.Enums;
-using Domain.Guest.Entities;
+using Domain.Guests.Entities;
 
 namespace DomainTests.Bookings
 {

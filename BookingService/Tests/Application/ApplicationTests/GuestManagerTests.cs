@@ -2,7 +2,7 @@
 using Application.Guest.Dtos;
 using Application.Guest.Requests;
 using Application.Responses;
-using Domain.Guest.Entities;
+using Domain.Guests.Entities;
 using Domain.Guests.Enums;
 using Domain.Guests.Ports;
 using Moq;
