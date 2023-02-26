@@ -11,6 +11,7 @@ namespace Domain.Roons.Entities
         public int Level { get; set; }
         public bool InMaintenance { get; set; }
         public Price Price { get; set; }
+        public ICollection<Guests.Entities.Booking>? Bookings { get; set; }
 
         public async Task Save(IRoomRepository roomRepository) 
         {
@@ -37,7 +38,38 @@ namespace Domain.Roons.Entities
 
         public bool HasGuest
         {
-            get { return true; }
+            get
+            {
+                var notAvailableStatuses = new List<Guests.Enums.Status>()
+                {
+                    Guests.Enums.Status.Created,
+                    Guests.Enums.Status.Paid,
+                };
+
+                return this.Bookings?.Where(
+                    b => b.Room.Id == this.Id &&
+                    notAvailableStatuses.Contains(b.Status)).Count() > 0;
+            }
+        }
+
+        public bool CanBeBooked()
+        {
+            try
+            {
+                this.ValidateState();
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
+            if (!this.IsAvailable)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         private void ValidateState()

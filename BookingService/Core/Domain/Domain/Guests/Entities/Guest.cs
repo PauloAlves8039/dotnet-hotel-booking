@@ -22,6 +22,12 @@ namespace Domain.Guests.Entities
             }
         }
 
+        public bool IsValid()
+        {
+            this.ValidateState();
+            return true;
+        }
+
         private void ValidateState()
         {
             if (DocumentId == null ||

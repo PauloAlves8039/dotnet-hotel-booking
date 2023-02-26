@@ -51,6 +51,13 @@ namespace Domain.Guests.Entities
         {
             this.ValidateState();
 
+            this.Guest.IsValid();
+
+            if (!this.Room.CanBeBooked())
+            {
+                throw new RoomCannotBeBookedException();
+            }
+
             if (this.Id == 0)
             {
                 var resp = await bookingRepository.CreateBooking(this);
@@ -69,24 +76,24 @@ namespace Domain.Guests.Entities
                 throw new PlacedAtIsARequiredInformationException();
             }
 
-            if (this.Start == null)
+            if (this.Start == default(DateTime))
             {
-
+                throw new StartDateTimeIsRequiredException();
             }
 
-            if (this.End == null)
+            if (this.End == default(DateTime))
             {
-
+                throw new EndDateTimeIsRequiredException();
             }
 
             if (this.Room == null)
             {
-
+                throw new RoomIsRequiredException();
             }
 
             if (this.Guest == null)
             {
-
+                throw new GuestIsRequiredException();
             }
         }
 
